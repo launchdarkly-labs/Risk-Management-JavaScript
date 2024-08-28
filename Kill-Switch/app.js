@@ -8,7 +8,8 @@ let songs = [];
 let isPlaying = false;
 
 // Initialize LaunchDarkly client
-const ldClient = LDClient.initialize('YOUR_CLIENT_SIDE_ID', { anonymous: true });
+const ldClient = LDClient.initialize(process.env.LAUNCHDARKLY_CLIENT_ID, { anonymous: true });
+
 
 ldClient.on('ready', () => {
     playPauseButton.addEventListener('click', togglePlayPause);
