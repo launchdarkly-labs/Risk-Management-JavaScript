@@ -1,0 +1,29 @@
+[
+    {
+      "id": 1,
+      "title": "Rollback Baby",
+      "artist": "DJ Toggle and the Feature Flaggers",
+      "file": "rollback-baby.mp3",
+      "artwork": "rollback-baby.png"
+    },
+    {
+      "id": 2,
+      "title": "Features Under Control",
+      "artist": "The Switch Masters",
+      "file": "features-under-control.mp3",
+      "artwork": "features-under-control.png"
+    },
+    {
+        "id": 3,
+        "title": "Ship It Safely",
+        "artist": "Launch Lab", 
+        "file": "ship-it-safely.mp3",
+        "artwork": "ship-it-safely.png"
+    },
+    {
+        "id": 4,
+        "title": "No Artist Available",
+        "artist": "No Album Available", 
+        "artwork": "sadrobot.png"
+    }
+]
