@@ -1,0 +1,17 @@
+{
+  "name": "kill-switch",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "parcel Kill-Switch/index.html",
+    "build": "parcel build Kill-Switch/index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  }
+}
