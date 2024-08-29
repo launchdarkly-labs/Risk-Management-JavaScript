@@ -64,13 +64,13 @@ const ldClient = LDClient.initialize(process.env.LAUNCHDARKLY_CLIENT_SIDE_ID, {
 });
 
 ldClient.on('ready', function() {
-  const showWebsite = ldClient.variation('kill-switch', true);
+  const show2000sVersion = ldClient.variation('kill-switch', false);
 
-  if (showWebsite) {
+  if (show2000sVersion) {
+    content.innerHTML = fanPageContent;
+    eraStyles.innerHTML = style2000s;
+  } else {
     content.innerHTML = fanPageContent;
     eraStyles.innerHTML = style1995;
-  } else {
-    content.innerHTML = maintenanceContent;
-    eraStyles.innerHTML = style2000s;
   }
 });
