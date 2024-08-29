@@ -51,7 +51,7 @@ const fanPageContent = `
   <h1>Welcome to DJ Toggle's Fan Page!</h1>
   <img src="https://placekitten.com/200/200" alt="DJ Toggle">
   <p>DJ Toggle is LaunchDarkly's favorite DJ, known for his sick beats and feature flag flipping skills!</p>
-  <marquee>DJ Toggle - Flipping Flags and Dropping Beats since 1995!</marquee>
+  <marquee>DJ Toggle - Flipping Flags and Dropping Beats!</marquee>
 `;
 
 const maintenanceContent = `
@@ -59,7 +59,7 @@ const maintenanceContent = `
   <p>DJ Toggle is currently fine-tuning his LaunchDarkly-powered turntables. Please check back later!</p>
 `;
 
-const ldClient = LDClient.initialize('YOUR_LAUNCHDARKLY_CLIENT_SIDE_ID', {
+const ldClient = LDClient.initialize(process.env.LAUNCHDARKLY_CLIENT_SIDE_ID, {
   key: 'anonymous'
 });
 
