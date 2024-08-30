@@ -64,7 +64,7 @@ const ldClient = LDClient.initialize(process.env.LAUNCHDARKLY_CLIENT_SIDE_ID, {
 });
 
 ldClient.on('ready', function() {
-  const show2000sVersion = ldClient.variation('kill-switch', false);
+  const show2000sVersion = ldClient.variation('style-update', false);
 
   if (show2000sVersion) {
     content.innerHTML = fanPageContent;
