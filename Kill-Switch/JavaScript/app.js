@@ -59,12 +59,18 @@ const maintenanceContent = `
   <p>DJ Toggle is currently fine-tuning his LaunchDarkly-powered turntables. Please check back later!</p>
 `;
 
+const errorButtonContent = `
+  <button id="error-button">Click Here!!!</button>
+  <div id="error-message" style="display: none; color: red; margin-top: 10px;"></div>
+`;
+
 const ldClient = LDClient.initialize(process.env.LAUNCHDARKLY_CLIENT_SIDE_ID, {
   key: 'anonymous'
 });
 
 ldClient.on('ready', function() {
-  const show2000sVersion = ldClient.variation('kill-switch', false);
+  const show2000sVersion = ldClient.variation('style-update', false);
+  const showErrorButton = ldClient.variation('kill-switch', false);
 
   if (show2000sVersion) {
     content.innerHTML = fanPageContent;
@@ -72,5 +78,19 @@ ldClient.on('ready', function() {
   } else {
     content.innerHTML = fanPageContent;
     eraStyles.innerHTML = style1995;
+  }
+
+  if (showErrorButton) {
+    content.innerHTML += errorButtonContent;
+    const errorButton = document.getElementById('error-button');
+    const errorMessage = document.getElementById('error-message');
+
+    errorButton.addEventListener('click', () => {
+      errorMessage.textContent = "💥🚨🐛AHHHH! AN ERROR!!!!!💥🚨🐛.";
+      errorMessage.style.display = 'block';
+      setTimeout(() => {
+        errorMessage.style.display = 'none';
+      }, 3000);
+    });
   }
 });
