@@ -23,34 +23,10 @@ const style1995 = `
   }
 `;
 
-const style2000s = `
-  body {
-    background-color: #000000;
-    font-family: "Arial", sans-serif;
-    color: #00FF00;
-    text-align: center;
-    background-image: url('https://media.giphy.com/media/3o7aCTfyhYawdOXcFW/giphy.gif');
-  }
-  h1 {
-    font-size: 36px;
-    text-shadow: 0 0 10px #00FF00;
-  }
-  p {
-    font-size: 16px;
-  }
-  #content {
-    border: 3px solid #00FF00;
-    border-radius: 15px;
-    padding: 20px;
-    margin: 20px;
-    background-color: rgba(0, 0, 0, 0.7);
-  }
-`;
-
 const fanPageContent = `
   <h1>Welcome to DJ Toggle's Fan Page!</h1>
-  <img src="https://placekitten.com/200/200" alt="DJ Toggle">
-  <p>DJ Toggle is LaunchDarkly's favorite DJ, known for his sick beats and feature flag flipping skills!</p>
+  <img src="https://picsum.photos/200" alt="DJ Toggle">
+  <p>DJ Toggle is LaunchDarkly's favorite DJ, known for his sick beats and feature flag-flipping skills!</p>
   <marquee>DJ Toggle - Flipping Flags and Dropping Beats!</marquee>
 `;
 
@@ -86,7 +62,7 @@ ldClient.on('ready', function() {
     const errorMessage = document.getElementById('error-message');
 
     errorButton.addEventListener('click', () => {
-      errorMessage.textContent = "💥🚨🐛AHHHH! AN ERROR!!!!!💥🚨🐛.";
+      errorMessage.textContent = "💥🚨🐛AHHHH! AN ERROR!!!!!💥🚨🐛";
       errorMessage.style.display = 'block';
       setTimeout(() => {
         errorMessage.style.display = 'none';
